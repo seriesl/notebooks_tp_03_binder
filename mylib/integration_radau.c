@@ -45,10 +45,12 @@ void radau5_integration(double tini, double tend, int n, double *yini, double *y
   double t=tini;
   double dt=0.;
 
-  // initial solution
-  for (int i=0; i<n; ++i) y[i] = yini[i];
+  int i;
 
-  for(int i=0; i<20; i++)
+  // initial solution
+  for (i=0; i<n; ++i) y[i] = yini[i];
+
+  for(i=0; i<20; i++)
   {
     iwork[i]=0;
     work[i]=0.0;
